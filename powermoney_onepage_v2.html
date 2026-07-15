@@ -401,7 +401,11 @@ header.scrolled .head-call b{color:#7db3ff}
 /* 폰 목업: 실사 이미지 배경 + 텍스트만 코딩 (하단은 섹션 끝에 밀착) */
 .stp-right{align-self:end;display:flex;flex-direction:column}
 .phone-wrap{position:relative;width:min(430px,92%);margin:0 auto}
-.phone-wrap .ph-img{display:block;width:100%;height:auto;filter:drop-shadow(0 30px 60px rgba(0,0,0,.5))}
+.phone-wrap .ph-img{
+  display:block;width:100%;height:auto;
+  /* 사진 자체의 파란 배경을 베젤 라인에 맞춰 잘라냄 (좌우 2% / 상단 1.9%, 코너 라운드) */
+  clip-path:inset(1.9% 2% 0 2% round 36px 36px 0 0);
+}
 .ph-date{ /* 코딩 날짜 (현재) */
   position:absolute;left:0;right:0;top:14.5%;text-align:center;z-index:2;
   font-size:17px;font-weight:600;color:#eaf2ff;text-shadow:0 1px 8px rgba(0,0,0,.35);
@@ -477,13 +481,18 @@ header.scrolled .head-call b{color:#7db3ff}
 .feed-card.enter{animation:cardIn .7s cubic-bezier(.2,.9,.3,1.18)}
 @keyframes cardIn{from{opacity:0;transform:translateY(-46px) scale(.94)}to{opacity:1;transform:translateY(0) scale(1)}}
 @media (prefers-reduced-motion:reduce){.feed-card,.feed-card.enter{animation:none;transition:none}}
-.feed-card .fd-img{position:relative;flex:none;width:78px;height:78px;border-radius:14px;overflow:hidden}
-.feed-card .fd-img img{width:100%;height:100%;object-fit:cover}
-.feed-card .fd-img .fd-cat{
-  position:absolute;left:0;right:0;bottom:0;
-  font-size:10px;font-weight:800;color:#fff;text-align:center;
-  padding:3px 0;background:rgba(15,37,64,.72);
+.feed-card .fd-ico{ /* 상품별 그라데이션 타일 (이미지 대체) */
+  position:relative;flex:none;width:66px;height:66px;border-radius:16px;overflow:hidden;
+  background:var(--g,linear-gradient(135deg,#1b64f2,#4d86ff));
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;
+  box-shadow:0 8px 18px rgba(15,40,90,.22);
 }
+.feed-card .fd-ico::before{ /* 은은한 ₩ 워터마크 */
+  content:"₩";position:absolute;right:-8px;bottom:-16px;
+  font-size:54px;font-weight:900;color:rgba(255,255,255,.16);line-height:1;
+}
+.feed-card .fd-ico b{position:relative;font-size:13px;font-weight:900;color:#fff;letter-spacing:.02em}
+.feed-card .fd-ico small{position:relative;font-size:9.5px;font-weight:700;color:rgba(255,255,255,.75)}
 .feed-card .fd-body{flex:1;min-width:0}
 .feed-card .fd-top{display:flex;align-items:center;gap:8px;margin-bottom:2px}
 .feed-card .fd-top b{font-size:16px;font-weight:900;color:var(--ink)}
@@ -495,21 +504,39 @@ header.scrolled .head-call b{color:#7db3ff}
 .feed-card .fd-top .fd-time{margin-left:auto;font-size:12px;font-weight:600;color:var(--muted);flex:none}
 .feed-card .fd-desc{font-size:13.5px;color:var(--body);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:6px}
 .feed-card .fd-desc b{color:var(--blue);font-weight:800}
-.feed-card .fd-bottom{display:flex;align-items:center;gap:8px}
-.feed-card .fd-amt{font-size:13px;font-weight:800;color:var(--ink);background:var(--cloud);border:1px solid var(--line);padding:3px 10px;border-radius:8px}
+.feed-card .fd-bottom{display:flex;align-items:baseline;gap:8px}
+.feed-card .fd-amt{display:flex;align-items:baseline;gap:6px}
+.feed-card .fd-amt small{font-size:11px;font-weight:700;color:var(--muted)}
+.feed-card .fd-amt b{ /* 금액 강조 */
+  font-size:18px;font-weight:900;letter-spacing:-.01em;
+  background:linear-gradient(90deg,var(--blue),#4d86ff);
+  -webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+}
+.feed-card .fd-bottom .st{margin-left:auto}
 .st{font-size:12px;font-weight:800;padding:3px 10px;border-radius:999px}
 .st.ok{background:#e7f8f0;color:var(--green)}
 .st.ing{background:var(--sky);color:var(--blue)}
 .st.wait{background:#fff4e0;color:#e08c00}
 
-/* ---------- safety ---------- */
+/* ---------- safety (히어로처럼 사진 + 반투명 네이비 오버레이) ---------- */
+#safety{
+  position:relative;color:#fff;overflow:hidden;
+  background:
+    linear-gradient(100deg,rgba(9,22,44,.9) 0%,rgba(10,26,52,.78) 45%,rgba(12,30,60,.55) 100%),
+    url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=80') center/cover;
+}
+#safety .sec-title{color:#fff;text-shadow:0 2px 20px rgba(9,22,44,.5)}
+#safety .sec-desc{color:#d9e5f7}
+#safety .eyebrow{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.28);color:#cfe0ff}
 #safety .safety-in{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.safety-img{border-radius:22px;overflow:hidden;box-shadow:var(--shadow)}
+.safety-img{border-radius:22px;overflow:hidden;box-shadow:0 26px 60px rgba(0,0,0,.45);border:1px solid rgba(255,255,255,.14)}
 .safety-img img{width:100%;height:400px;object-fit:cover}
 .safe-list{margin-top:26px;display:flex;flex-direction:column;gap:14px}
 .safe-list li{
-  display:flex;gap:12px;background:var(--cloud);border:1px solid var(--line);
-  border-radius:14px;padding:16px 18px;font-size:14.5px;color:var(--ink);font-weight:600;
+  display:flex;gap:12px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.2);
+  border-radius:14px;padding:16px 18px;font-size:14.5px;color:#f2f7ff;font-weight:600;
+  backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
 }
 .safe-list .n{
   flex:none;width:26px;height:26px;border-radius:8px;background:var(--blue);
@@ -680,13 +707,17 @@ footer .copy{margin-top:24px;font-size:12px;color:#5f7494}
   .lstat b em{font-size:12px}
   .lstat small{font-size:10.5px}
   .feed-count{right:2px;top:-18px;font-size:12px;padding:8px 14px}
-  .feed-stage{height:392px}
+  .feed-stage{height:346px} /* 모바일: 카드 4장만 노출 */
   .feed-card{padding:11px 12px;gap:11px;border-radius:15px}
-  .feed-card .fd-img{width:62px;height:62px;border-radius:11px}
+  .feed-card .fd-ico{width:56px;height:56px;border-radius:13px}
+  .feed-card .fd-ico b{font-size:11.5px}
+  .feed-card .fd-ico small{font-size:8.5px}
+  .feed-card .fd-ico::before{font-size:44px;right:-7px;bottom:-13px}
   .feed-card .fd-top b{font-size:14px}
   .feed-card .fd-top .fd-time{font-size:11px}
   .feed-card .fd-desc{font-size:12px;margin-bottom:5px}
-  .feed-card .fd-amt{font-size:11px}
+  .feed-card .fd-amt small{font-size:10px}
+  .feed-card .fd-amt b{font-size:15px}
   .st{font-size:11px}
   .safety-img img{height:230px}
   .apply-copy h2{font-size:29px}
@@ -734,11 +765,11 @@ footer .copy{margin-top:24px;font-size:12px;color:#5f7494}
   <div class="wrap hero-in">
     <div class="reveal">
       <span class="eyebrow">✦ 사업자 전용 · 개인사업자 / 법인 / 기업</span>
-      <h1>사업자금 고민,<br><em>밝고 빠르게</em> 해결하세요</h1>
+      <h1>사업자금 고민,<br><em>쉽고 빠르게</em> 해결하세요</h1>
       <p class="lead">개업 직후여도, 법인 설립 3개월이라도.<br>매출만 확인되면 파워머니플랜이 함께합니다.</p>
       <ul class="hero-points">
         <li><span class="chk">✓</span> 단순 상담·조회는 신용점수에 영향이 없습니다</li>
-        <li><span class="chk">✓</span> 소득신고와 무관, 월 300만원 이상 매출 확인 시 가능</li>
+        <li><span class="chk">✓</span> 소득신고와 무관, 기준이상 매출 확인 시 가능</li>
         <li><span class="chk">✓</span> 대출기간 1~12개월, 연장 가능</li>
       </ul>
       <!-- 실시간 자금 해결 사례 슬라이더 -->
@@ -854,7 +885,7 @@ footer .copy{margin-top:24px;font-size:12px;color:#5f7494}
       <article class="prod-card reveal">
         <div class="prod-thumb">
           <!-- [IMG SLOT 1] 개인사업자(소상공인 매장) -->
-          <img data-img-slot="1" src="https://d8j0ntlcm91z4.cloudfront.net/user_3GGALlV4YyJI7wJZp41NzY6C3Y3/hf_20260713_233604_ded6a80d-0051-4a7c-bad7-4ab5cd36c377.png" alt="개인사업자 소상공인 매장 사장님 이미지" loading="lazy">
+          <img data-img-slot="1" src="https://d8j0ntlcm91z4.cloudfront.net/user_3GGALlV4YyJI7wJZp41NzY6C3Y3/hf_20260715_080657_6cae4085-512a-42cf-aa9c-894f8b87b836.png" alt="개인사업자 매장 성장 3D 일러스트" loading="lazy">
           <span class="pt-tag">개업 직후 OK</span>
         </div>
         <div class="prod-body">
@@ -874,7 +905,7 @@ footer .copy{margin-top:24px;font-size:12px;color:#5f7494}
       <article class="prod-card reveal">
         <div class="prod-thumb">
           <!-- [IMG SLOT 2] 법인(비즈니스 미팅) -->
-          <img data-img-slot="2" src="https://d8j0ntlcm91z4.cloudfront.net/user_3GGALlV4YyJI7wJZp41NzY6C3Y3/hf_20260713_233606_9a0a629c-9d53-4155-91f1-e98679239504.png" alt="법인 계약 체결 비즈니스 미팅 이미지" loading="lazy">
+          <img data-img-slot="2" src="https://d8j0ntlcm91z4.cloudfront.net/user_3GGALlV4YyJI7wJZp41NzY6C3Y3/hf_20260715_080708_f4133e31-8fd5-452e-9478-882b6b590888.png" alt="법인 기업 신용 보증 3D 일러스트" loading="lazy">
           <span class="pt-tag">설립 3개월 이상</span>
         </div>
         <div class="prod-body">
@@ -894,7 +925,7 @@ footer .copy{margin-top:24px;font-size:12px;color:#5f7494}
       <article class="prod-card reveal">
         <div class="prod-thumb">
           <!-- [IMG SLOT 3] 기업단기자금(재무/차트) -->
-          <img data-img-slot="3" src="https://d8j0ntlcm91z4.cloudfront.net/user_3GGALlV4YyJI7wJZp41NzY6C3Y3/hf_20260713_233609_47314077-d70b-43ae-99f6-6fa2a84f8470.png" alt="기업 긴급 단기자금 송금 이미지" loading="lazy">
+          <img data-img-slot="3" src="https://d8j0ntlcm91z4.cloudfront.net/user_3GGALlV4YyJI7wJZp41NzY6C3Y3/hf_20260715_080724_4c711d95-5194-4b0b-865e-bc4cf93a6559.png" alt="기업 단기자금 즉시 송금 3D 일러스트" loading="lazy">
           <span class="pt-tag">긴급자금 특화</span>
         </div>
         <div class="prod-body">
@@ -997,7 +1028,7 @@ footer .copy{margin-top:24px;font-size:12px;color:#5f7494}
     <div class="live-in">
       <div class="live-copy reveal">
         <div class="live-clock"><span class="dot"></span><span id="liveClock">실시간 집계중</span></div>
-        <h3>접수와 동시에 <em>담당 플래너 배정</em>,<br>승인까지 실시간으로 움직입니다</h3>
+        <h3>접수와 동시에 <em>담당자 배정</em>,<br>승인까지 실시간으로 움직입니다</h3>
         <p>새 상담이 접수될 때마다 카드가 하나씩 쌓입니다. 고객님의 이름·지역 정보는 개인정보 보호를 위해 마스킹 처리되어 표시됩니다.</p>
         <div class="live-stats">
           <div class="lstat hl"><b><span id="todayCount">0</span><em>건</em></b><small>오늘 접수</small></div>
@@ -1019,7 +1050,7 @@ footer .copy{margin-top:24px;font-size:12px;color:#5f7494}
   <div class="wrap safety-in">
     <div class="safety-img reveal">
       <!-- [IMG SLOT 4] 신뢰/안전(악수) -->
-      <img data-img-slot="4" src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=1000&q=80" alt="신뢰의 악수 이미지" loading="lazy">
+      <img data-img-slot="4" src="https://d8j0ntlcm91z4.cloudfront.net/user_3GGALlV4YyJI7wJZp41NzY6C3Y3/hf_20260715_080740_dc1e99f6-2d31-4ff4-b644-bcc8a43c1cea.png" alt="신뢰의 악수 이미지" loading="lazy">
     </div>
     <div class="reveal">
       <span class="eyebrow">SAFE LOAN</span>
@@ -1149,13 +1180,12 @@ const STATUS=[
 const rnd=a=>a[Math.floor(Math.random()*a.length)];
 
 /* ---------- 실시간 카드 피드 (카드뉴스 스택, 날짜/시간 자동) ---------- */
-const IMG_BASE='https://d8j0ntlcm91z4.cloudfront.net/user_3GGALlV4YyJI7wJZp41NzY6C3Y3/';
-const FEED_ITEMS=[
-  {p:'개인사업자대출',cat:'개인사업자',img:IMG_BASE+'hf_20260713_233604_ded6a80d-0051-4a7c-bad7-4ab5cd36c377_min.webp',min:500,max:20000},
-  {p:'자영업자대출',cat:'자영업자',img:IMG_BASE+'hf_20260713_234832_8d46205c-782e-4323-aa0c-99983896aaf7_min.webp',min:300,max:10000},
-  {p:'법인사업자대출',cat:'법인사업자',img:IMG_BASE+'hf_20260713_233606_9a0a629c-9d53-4155-91f1-e98679239504_min.webp',min:3000,max:100000},
-  {p:'기업자금대출',cat:'법인자금',img:IMG_BASE+'hf_20260713_234749_3f94ae31-91d2-42d0-8fd0-2e45fdefcf97_min.webp',min:3000,max:100000},
-  {p:'기업단기자금',cat:'긴급자금',img:IMG_BASE+'hf_20260713_233609_47314077-d70b-43ae-99f6-6fa2a84f8470_min.webp',min:1000,max:100000}
+const FEED_ITEMS=[ /* g: 카드 타일 그라데이션, tag: 타일 라벨 */
+  {p:'개인사업자대출',cat:'개인사업자',tag:'개인',g:'linear-gradient(135deg,#1b64f2,#4d86ff)',min:500,max:20000},
+  {p:'자영업자대출',cat:'자영업자',tag:'자영업',g:'linear-gradient(135deg,#0e9f6e,#34d399)',min:300,max:10000},
+  {p:'법인사업자대출',cat:'법인사업자',tag:'법인',g:'linear-gradient(135deg,#1e3a8a,#3b82f6)',min:3000,max:100000},
+  {p:'기업자금대출',cat:'법인자금',tag:'기업',g:'linear-gradient(135deg,#0f2f66,#2563eb)',min:3000,max:100000},
+  {p:'기업단기자금',cat:'긴급자금',tag:'단기',g:'linear-gradient(135deg,#e08c00,#f5b04d)',min:1000,max:100000}
 ];
 const REGIONS=['서울','경기','인천','천안','아산','대전','세종','청주','부산','대구','광주','수원','성남','창원'];
 const fmtAmt=v=>{ /* v: 만원 단위 */
@@ -1167,7 +1197,12 @@ const relTime=s=>s<60?'방금 전':s<3600?`${Math.floor(s/60)}분 전`:`${Math.f
 const statusByAge=s=>s<75?{t:'접수완료',c:'ing'}:s<240?{t:'심사중',c:'wait'}:{t:'승인완료',c:'ok'};
 
 const feedStage=document.getElementById('feedStage');
-const FEED_MAX=6,FEED_OFFSET=94;
+const feedMQ=matchMedia('(max-width:640px)');
+/* 모바일: 4장만 보이고 아래로 갈수록 빠르게 투명해짐 (1, .78, .56, .34) */
+const feedMax=()=>feedMQ.matches?5:6;
+const feedOffset=()=>feedMQ.matches?86:94;
+const feedFade=()=>feedMQ.matches?.22:.06;
+const FEED_MAX=6; /* 데이터 보관 개수 (데스크톱 표시 최대치) */
 let feedData=[];
 /* 오늘 접수 카운트: 시간대 기반 기준값 + 새 카드마다 +1 */
 let todayCount=(()=>{const d=new Date();return 9+Math.floor((d.getHours()*60+d.getMinutes())/22)})();
@@ -1183,21 +1218,21 @@ function buildCardEl(d,isNew){
   const el=document.createElement('div');
   el.className='feed-card'+(isNew?' enter':'');
   el.innerHTML=`
-    <div class="fd-img"><img src="${d.f.img}" alt="${d.f.p}" loading="lazy"><span class="fd-cat">${d.f.cat}</span></div>
+    <div class="fd-ico" style="--g:${d.f.g}"><b>${d.f.tag}</b><small>${d.f.cat}</small></div>
     <div class="fd-body">
       <div class="fd-top"><b>${d.name}</b><span class="fd-new">NEW</span><span class="fd-time"></span></div>
       <p class="fd-desc">${d.region} · <b>${d.f.p}</b> 한도조회 신청</p>
-      <div class="fd-bottom"><span class="fd-amt">희망금액 ${fmtAmt(d.amt)}</span><span class="st"></span></div>
+      <div class="fd-bottom"><span class="fd-amt"><small>희망금액</small><b>${fmtAmt(d.amt)}</b></span><span class="st"></span></div>
     </div>`;
   return el;
 }
 function feedLayout(){
-  const now=Date.now();
+  const now=Date.now(),max=feedMax(),off=feedOffset(),fade=feedFade();
   feedData.forEach((d,i)=>{
     const sec=(now-d.ts)/1000;
     d.el.style.zIndex=40-i;
-    d.el.style.transform=`translateY(${i*FEED_OFFSET}px) scale(${Math.max(1-i*.03,.85)})`;
-    d.el.style.opacity=i>=FEED_MAX-1?'0':String(1-i*.06);
+    d.el.style.transform=`translateY(${i*off}px) scale(${Math.max(1-i*.03,.85)})`;
+    d.el.style.opacity=i>=max-1?'0':String(Math.max(1-i*fade,0));
     d.el.querySelector('.fd-time').textContent=relTime(sec);
     const s=statusByAge(sec),stEl=d.el.querySelector('.st');
     stEl.className='st '+s.c;stEl.textContent=s.t;
@@ -1224,6 +1259,7 @@ function feedAdd(){
 }
 setTimeout(feedAdd,2600);
 setInterval(feedLayout,20000); /* 시간 라벨·상태 갱신 */
+feedMQ.addEventListener('change',feedLayout); /* 화면 크기 전환 시 재배치 */
 
 /* ---------- 실시간 집계 시계 (항상 오늘 날짜) ---------- */
 const liveClockEl=document.getElementById('liveClock');
