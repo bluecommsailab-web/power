@@ -1,0 +1,173 @@
+/* ===== 파워머니플랜 어드민 ===== */
+:root{
+  --ink:#1b2436; --dim:#7b8698; --line:#e4e9f2; --bg:#f4f6fa;
+  --blue:#2563eb; --navy:#1e3a8a; --sky:#eaf1ff;
+  --red:#e11d48; --pink:#ec4899; --green:#0e9f6e; --amber:#f59e0b;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:"Pretendard","Malgun Gothic","Apple SD Gothic Neo",system-ui,sans-serif;
+  background:var(--bg); color:var(--ink); font-size:14px; line-height:1.5;
+}
+a{color:var(--blue); text-decoration:none}
+button{font-family:inherit; cursor:pointer}
+input,select,textarea{
+  font-family:inherit; font-size:13px; border:1px solid var(--line); border-radius:8px;
+  padding:8px 10px; background:#fff; color:var(--ink);
+}
+input:focus,select:focus,textarea:focus{outline:2px solid rgba(37,99,235,.25); border-color:var(--blue)}
+
+/* ---------- 버튼 ---------- */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:4px;
+  border:0; border-radius:8px; padding:9px 16px; font-size:13px; font-weight:600;
+  color:#fff; background:var(--blue); white-space:nowrap;
+}
+.btn:hover{filter:brightness(1.08)}
+.btn-blue{background:var(--blue)} .btn-navy{background:var(--navy)}
+.btn-red{background:var(--red)}  .btn-pink{background:var(--pink)}
+.btn-green{background:var(--green)}
+.btn-ghost{background:#fff; color:var(--ink); border:1px solid var(--line)}
+.btn-sm{padding:4px 10px; font-size:12px; border-radius:6px}
+
+/* ---------- 상단바 ---------- */
+.topbar{background:#111a2e; color:#fff; position:sticky; top:0; z-index:20}
+.topbar-in{max-width:1500px; margin:0 auto; padding:0 24px; height:56px; display:flex; align-items:center; justify-content:space-between}
+.brand{font-size:15px; letter-spacing:.06em; color:#9db4e8}
+.brand b{color:#fff}
+.brand span{margin-left:8px; font-size:11px; background:var(--blue); padding:2px 8px; border-radius:20px; letter-spacing:.12em}
+.top-right{display:flex; align-items:center; gap:12px}
+.admin-name{color:#c6d2ea; font-size:13px}
+.topbar .btn-ghost{background:transparent; color:#c6d2ea; border-color:#33415e; padding:6px 14px}
+
+.top-left{display:flex; align-items:center; gap:14px}
+.side-toggle{
+  background:transparent; border:1px solid #33415e; color:#c6d2ea; border-radius:8px;
+  width:36px; height:34px; font-size:16px; line-height:1;
+}
+.side-toggle:hover{background:#1d2a45}
+.btn-home{background:var(--blue); padding:6px 14px}
+
+/* ---------- 사이드바 ---------- */
+.layout{display:flex; align-items:stretch; min-height:calc(100vh - 56px)}
+.sidebar{
+  width:210px; flex-shrink:0; background:#111a2e; padding:18px 12px;
+  transition:width .22s ease, padding .22s ease; overflow:hidden; white-space:nowrap;
+}
+.side-group{
+  font-size:11px; font-weight:700; letter-spacing:.12em; color:#5c6c8c;
+  padding:14px 10px 6px;
+}
+.side-link{
+  display:flex; align-items:center; gap:10px; padding:10px 12px; border-radius:8px;
+  color:#c6d2ea; font-size:13.5px; font-weight:600; margin-bottom:2px;
+}
+.side-link:hover{background:#1d2a45; color:#fff}
+.side-link.on{background:var(--blue); color:#fff}
+.side-icon{font-size:15px}
+.content{flex:1; min-width:0}
+body.side-collapsed .sidebar{width:0; padding:18px 0}
+
+/* ---------- 레이아웃 ---------- */
+.wrap{max-width:1500px; margin:0 auto; padding:28px 24px 60px}
+.wrap-narrow{max-width:1080px}
+.page-head{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:20px}
+.page-head h1{font-size:22px; font-weight:800}
+.bulk-btns{display:flex; gap:8px; flex-wrap:wrap}
+
+/* ---------- 요약 카드 ---------- */
+.stat-row{display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:20px}
+.stat{background:#fff; border:1px solid var(--line); border-radius:12px; padding:16px 20px}
+.stat span{display:block; font-size:12px; color:var(--dim); margin-bottom:6px}
+.stat b{font-size:24px; font-weight:800}
+.stat.hl{background:var(--sky); border-color:#c9dbff}
+.stat.hl b{color:var(--blue)}
+
+/* ---------- 필터 ---------- */
+.filter{background:#fff; border:1px solid var(--line); border-radius:12px; padding:14px 18px; margin-bottom:16px; display:flex; flex-direction:column; gap:10px}
+.filter-row{display:flex; align-items:center; gap:8px; flex-wrap:wrap}
+.filter .fl{font-weight:700; font-size:13px; min-width:58px; color:#3c4657}
+.quick{display:flex; gap:4px; flex-wrap:wrap; margin-left:6px}
+.qbtn{font-size:12px; padding:6px 10px; border-radius:6px; background:var(--bg); color:#4a5568; border:1px solid var(--line)}
+.qbtn:hover{background:var(--sky); color:var(--blue); border-color:#c9dbff}
+.spacer{flex:1}
+
+/* ---------- 테이블 ---------- */
+.table-meta{display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; color:var(--dim); font-size:13px}
+.table-meta b{color:var(--blue)}
+.table-scroll{overflow-x:auto; background:#fff; border:1px solid var(--line); border-radius:12px}
+.board{width:100%; border-collapse:collapse; min-width:1180px}
+.board thead th{
+  background:#f0f3f9; color:#3c4657; font-size:12.5px; font-weight:700;
+  padding:11px 10px; border-bottom:1px solid var(--line); white-space:nowrap; text-align:center;
+  position:sticky; top:0;
+}
+.board tbody td{padding:9px 10px; border-bottom:1px solid #eef1f7; text-align:center; white-space:nowrap; font-size:13px}
+.board tbody tr:hover{background:#f8faff}
+.board tbody tr:last-child td{border-bottom:0}
+.w-chk{width:36px}
+.strong{font-weight:700}
+.dim{color:var(--dim)}
+.kw{max-width:220px; overflow:hidden; text-overflow:ellipsis; color:#4a5568}
+.nowrap{white-space:nowrap}
+.empty{padding:48px 0!important; color:var(--dim)}
+.break{word-break:break-all; white-space:normal}
+
+/* 접속경로 뱃지 */
+.ch-badge{display:inline-block; background:var(--sky); color:var(--navy); font-size:12px; font-weight:600; padding:3px 10px; border-radius:20px}
+
+/* 상태 셀렉트 색상 */
+.st-select{font-size:12.5px; font-weight:700; padding:5px 8px; border-radius:6px; min-width:88px}
+.st-new  {color:var(--blue);  border-color:#bcd3ff; background:#f0f6ff}
+.st-done {color:var(--green); border-color:#b7e4d0; background:#effaf5}
+.st-talk {color:#7c3aed;      border-color:#ddd0fb; background:#f7f3ff}
+.st-going{color:var(--amber); border-color:#f5deb0; background:#fffaf0}
+.st-away {color:#64748b;      border-color:#d7dee8; background:#f6f8fb}
+.st-err  {color:var(--red);   border-color:#f5c2ce; background:#fff1f4}
+.st-trash{color:#8b8f98;      border-color:#d9dbe0; background:#f2f3f5; text-decoration:line-through}
+
+/* ---------- 페이지네이션 ---------- */
+.paging{display:flex; justify-content:center; gap:4px; margin-top:20px}
+.paging a{
+  min-width:34px; height:34px; display:inline-flex; align-items:center; justify-content:center;
+  background:#fff; border:1px solid var(--line); border-radius:8px; color:#4a5568; font-size:13px;
+}
+.paging a.on{background:var(--blue); border-color:var(--blue); color:#fff; font-weight:700}
+
+/* ---------- 상세 페이지 ---------- */
+.detail-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px}
+.card{background:#fff; border:1px solid var(--line); border-radius:12px; padding:20px}
+.card h2{font-size:15px; font-weight:800; margin-bottom:14px; padding-bottom:10px; border-bottom:1px solid var(--line)}
+.kv{width:100%; border-collapse:collapse}
+.kv th{width:110px; text-align:left; color:var(--dim); font-size:12.5px; font-weight:600; padding:7px 0; vertical-align:top}
+.kv td{padding:7px 0; font-size:13.5px}
+.inline-form{display:flex; gap:6px; align-items:center}
+.memo{width:100%; resize:vertical; margin-bottom:10px}
+.right{text-align:right}
+.flash-ok{background:#effaf5; border:1px solid #b7e4d0; color:var(--green); border-radius:8px; padding:10px 14px; margin-bottom:14px; font-weight:600}
+
+/* ---------- 로그인/셋업 ---------- */
+.auth-body{display:flex; align-items:center; justify-content:center; min-height:100vh; background:#111a2e}
+.auth-card{width:min(400px,92vw); background:#fff; border-radius:16px; padding:36px 32px}
+.auth-logo{text-align:center; letter-spacing:.08em; color:#8a97ad; margin-bottom:6px; font-size:14px}
+.auth-logo b{color:var(--navy)}
+.auth-card h1{font-size:19px; text-align:center; margin-bottom:22px}
+.auth-card label{display:block; font-size:13px; font-weight:600; margin-bottom:14px; color:#3c4657}
+.auth-card input{width:100%; margin-top:6px; padding:11px 12px}
+.auth-card button{width:100%; border:0; border-radius:10px; background:var(--blue); color:#fff; font-size:15px; font-weight:700; padding:13px; margin-top:6px}
+.auth-error{background:#fff1f4; color:var(--red); border:1px solid #f5c2ce; border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:16px}
+.auth-ok{background:#effaf5; color:var(--green); border:1px solid #b7e4d0; border-radius:8px; padding:10px 12px; font-size:13px; margin-bottom:16px}
+
+/* ---------- 접속자 로그 ---------- */
+.stat-row-3{grid-template-columns:repeat(3,1fr)}
+.stat b small{font-size:14px; color:var(--dim); font-weight:400}
+.path-cell{max-width:420px; overflow:hidden; text-overflow:ellipsis; text-align:left!important}
+.kw-label{color:var(--navy); font-weight:600}
+.ref-url{color:var(--dim); font-size:12px}
+
+@media (max-width:900px){
+  .stat-row,.stat-row-3{grid-template-columns:repeat(2,1fr)}
+  .detail-grid{grid-template-columns:1fr}
+  .sidebar{position:fixed; left:0; top:56px; bottom:0; z-index:15; box-shadow:4px 0 18px rgba(0,0,0,.25)}
+  body.side-collapsed .sidebar{box-shadow:none}
+}
