@@ -1,0 +1,2353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>파워머니플랜 | 개인·법인 사업자 전용 대출 상담</title>
+<meta name="description" content="개인사업자대출, 법인사업자대출, 기업단기자금 상담. 정식 등록 대부중개업체 파워머니플랜의 사업자 전용 무료 상담.">
+<meta property="og:title" content="파워머니플랜 | 사업자 전용 대출 상담">
+<meta property="og:description" content="사업자금 상담부터 접수, 심사 안내까지 등록 업체와 안전하게 진행하세요.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="powermoney_codex_assets/hero-consultation.webp">
+<link rel="preload" as="image" href="powermoney_codex_assets/hero-consultation.webp" fetchpriority="high">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root {
+  --surface-primary: #f5f8fc;
+  --surface-paper: #ffffff;
+  --surface-muted: #eaf2ff;
+  --surface-deep: #0e2342;
+  --surface-paper-rgb: 255, 255, 255;
+  --surface-deep-rgb: 9, 22, 44;
+  --surface-deep-alt-rgb: 14, 35, 66;
+  --surface-deep-mid-rgb: 10, 32, 70;
+  --surface-deep-soft-rgb: 11, 57, 125;
+  --text-primary: #0f2540;
+  --text-secondary: #44556c;
+  --text-muted: #7b8aa0;
+  --text-primary-rgb: 15, 37, 64;
+  --border-default: #dbe6f5;
+  --border-strong: #9fb8dc;
+  --accent-primary: #1b64f2;
+  --accent-hover: #0e4fd1;
+  --accent-secondary: #37c8ff;
+  --accent-light: #7db3ff;
+  --accent-bright: #4d86ff;
+  --accent-frost: #cfe5ff;
+  --accent-soft: #dce9ff;
+  --accent-primary-rgb: 27, 100, 242;
+  --accent-secondary-rgb: 55, 200, 255;
+  --accent-light-rgb: 125, 179, 255;
+  --text-on-deep-secondary: #c9d6ec;
+  --status-success: #12b76a;
+  --status-warning: #ffab1f;
+  --status-error: #b42318;
+  --status-warning-rgb: 255, 171, 31;
+  --shadow-deep-rgb: 6, 19, 43;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --max-width: 1180px;
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --shadow-subtle: 0 1px 2px rgba(var(--text-primary-rgb), 0.06);
+  --shadow-default: 0 16px 40px rgba(var(--text-primary-rgb), 0.12);
+  --shadow-fixed: 0 -10px 30px rgba(var(--text-primary-rgb), 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Pretendard Variable", Pretendard, "Noto Sans KR", system-ui, -apple-system, sans-serif;
+  color: var(--text-secondary);
+  background: var(--surface-primary);
+  line-height: 1.65;
+  word-break: keep-all;
+  text-wrap: pretty;
+  font-feature-settings: "tnum";
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+body.locked {
+  overflow: hidden;
+}
+
+img,
+svg {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+.skip-link {
+  position: fixed;
+  left: var(--space-4);
+  top: var(--space-4);
+  z-index: 999;
+  transform: translateY(-150%);
+  background: var(--surface-paper);
+  color: var(--text-primary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  padding: var(--space-2) var(--space-4);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.container {
+  width: min(var(--max-width), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.section {
+  padding: var(--space-20) 0;
+}
+
+.section.compact {
+  padding: var(--space-16) 0;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0 0 var(--space-4);
+  color: var(--accent-primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.section-title {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.18;
+  letter-spacing: 0;
+}
+
+.section-lead {
+  max-width: 700px;
+  margin: var(--space-4) 0 0;
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 48px;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  transition: background 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 120ms ease;
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-bright));
+  color: var(--surface-paper);
+  box-shadow: 0 10px 24px rgba(var(--accent-primary-rgb), 0.22);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--accent-hover), var(--accent-primary));
+  box-shadow: 0 12px 28px rgba(var(--accent-primary-rgb), 0.3);
+}
+
+.btn-secondary {
+  border: 1px solid var(--border-strong);
+  color: var(--text-primary);
+  background: rgba(var(--surface-paper-rgb), 0.82);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(var(--accent-primary-rgb), 0.26);
+  outline-offset: 3px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  isolation: isolate;
+  background: rgba(var(--surface-paper-rgb), 0.92);
+  border-bottom: 1px solid var(--border-default);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 6px 22px rgba(var(--text-primary-rgb), 0.06);
+  transition: background 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-light), var(--accent-secondary), transparent);
+  opacity: 0.78;
+}
+
+.site-header.is-scrolled {
+  background: rgba(var(--surface-deep-alt-rgb), 0.94);
+  border-bottom-color: rgba(var(--accent-light-rgb), 0.22);
+  box-shadow: 0 14px 34px rgba(var(--shadow-deep-rgb), 0.24);
+}
+
+.scroll-progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  transform: scaleX(var(--scroll-progress, 0));
+  transform-origin: left center;
+  will-change: transform;
+}
+
+.header-inner {
+  display: grid;
+  grid-template-columns: minmax(190px, 1fr) auto minmax(190px, 1fr);
+  align-items: center;
+  gap: var(--space-5);
+  min-height: 76px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 54px;
+  padding-right: var(--space-2);
+  color: var(--text-primary);
+  font-weight: 800;
+  letter-spacing: 0;
+  transition: color 180ms ease, transform 120ms ease;
+}
+
+.brand:hover {
+  transform: translateY(-1px);
+}
+
+.brand-emblem {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 25% 22%, rgba(var(--surface-paper-rgb), 0.5), transparent 28%),
+    linear-gradient(145deg, var(--text-primary) 0%, var(--accent-primary) 58%, var(--accent-secondary) 100%);
+  color: var(--surface-paper);
+  box-shadow: 0 14px 28px rgba(var(--accent-primary-rgb), 0.28);
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.brand-emblem::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 18%, rgba(var(--surface-paper-rgb), 0.36) 42%, transparent 64%);
+  transform: translateX(-120%) skewX(-18deg);
+  transition: transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.brand:hover .brand-emblem::before {
+  transform: translateX(120%) skewX(-18deg);
+}
+
+.brand-emblem::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(var(--surface-paper-rgb), 0.36);
+  border-radius: 10px;
+}
+
+.brand-emblem span {
+  position: relative;
+  z-index: 1;
+}
+
+.brand-word {
+  display: grid;
+  gap: 2px;
+  line-height: 1.05;
+}
+
+.brand-word .logo-word {
+  color: var(--text-primary);
+  font-size: 21px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.brand-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 3px;
+  border-radius: 999px;
+  vertical-align: super;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+  box-shadow: 0 0 0 4px rgba(var(--accent-primary-rgb), 0.1), 0 2px 10px rgba(var(--accent-secondary-rgb), 0.48);
+}
+
+.brand-word small {
+  display: block;
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.site-header.is-scrolled .brand,
+.site-header.is-scrolled .brand-word .logo-word {
+  color: var(--surface-paper);
+}
+
+.site-header.is-scrolled .brand-word small {
+  color: var(--text-on-deep-secondary);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-6);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.nav a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: var(--space-2);
+  transition: color 180ms ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: var(--space-2);
+  right: var(--space-2);
+  bottom: 5px;
+  height: 2px;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 180ms ease;
+}
+
+.nav a:hover,
+.nav a[aria-current="true"] {
+  color: var(--accent-primary);
+}
+
+.nav a:hover::after,
+.nav a[aria-current="true"]::after {
+  transform: scaleX(1);
+}
+
+.site-header.is-scrolled .nav {
+  color: var(--text-on-deep-secondary);
+}
+
+.site-header.is-scrolled .nav a:hover,
+.site-header.is-scrolled .nav a[aria-current="true"] {
+  color: var(--accent-secondary);
+}
+
+.header-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.license-chip {
+  border: 1px solid rgba(var(--accent-primary-rgb), 0.28);
+  color: var(--accent-primary);
+  background: rgba(var(--accent-primary-rgb), 0.07);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.site-header.is-scrolled .license-chip {
+  color: var(--accent-secondary);
+  border-color: rgba(var(--accent-secondary-rgb), 0.28);
+  background: rgba(var(--accent-secondary-rgb), 0.1);
+}
+
+.mobile-menu-button {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-default);
+  background: var(--surface-paper);
+  color: var(--text-primary);
+}
+
+.site-header.is-scrolled .mobile-menu-button {
+  border-color: rgba(var(--accent-light-rgb), 0.26);
+  background: rgba(var(--surface-paper-rgb), 0.08);
+  color: var(--surface-paper);
+}
+
+.mobile-menu-button svg {
+  width: 20px;
+  height: 20px;
+  margin: auto;
+}
+
+.hero {
+  position: relative;
+  --pointer-x: 58%;
+  --pointer-y: 38%;
+  min-height: auto;
+  display: grid;
+  align-items: end;
+  overflow: hidden;
+  color: var(--surface-paper);
+  background: var(--surface-deep);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    linear-gradient(90deg, rgba(var(--surface-deep-rgb), 0.92) 0%, rgba(var(--surface-deep-mid-rgb), 0.78) 42%, rgba(var(--surface-deep-soft-rgb), 0.24) 78%),
+    linear-gradient(180deg, rgba(var(--surface-deep-rgb), 0.12) 0%, rgba(var(--surface-deep-rgb), 0.62) 100%),
+    url("powermoney_codex_assets/hero-consultation.webp") center / cover no-repeat;
+  transform: scale(1.01);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at var(--pointer-x) var(--pointer-y), rgba(var(--accent-secondary-rgb), 0.24), transparent 28%),
+    linear-gradient(115deg, rgba(var(--accent-light-rgb), 0.18), transparent 38%, rgba(var(--accent-secondary-rgb), 0.08) 78%);
+  opacity: 0.86;
+  transition: opacity 220ms ease;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: clamp(48px, 7vw, 84px) 0 var(--space-16);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.98fr) minmax(320px, 0.72fr);
+  gap: var(--space-10);
+  align-items: end;
+}
+
+.hero-copy {
+  max-width: 760px;
+}
+
+.hero-copy .eyebrow {
+  color: rgba(var(--surface-paper-rgb), 0.86);
+}
+
+.hero h1 {
+  margin: 0;
+  max-width: 740px;
+  color: var(--surface-paper);
+  font-size: clamp(40px, 6vw, 82px);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.hero h1 span {
+  white-space: nowrap;
+  background: linear-gradient(90deg, var(--accent-light), var(--accent-secondary), var(--accent-frost));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--accent-secondary);
+}
+
+.hero-lead {
+  max-width: 620px;
+  margin: var(--space-6) 0 0;
+  color: rgba(var(--surface-paper-rgb), 0.82);
+  font-size: clamp(17px, 2vw, 21px);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+}
+
+.hero-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  max-width: 680px;
+  margin-top: var(--space-10);
+  border: 1px solid rgba(var(--surface-paper-rgb), 0.22);
+  background: rgba(var(--surface-paper-rgb), 0.18);
+}
+
+.hero-fact {
+  padding: var(--space-4);
+  background: rgba(var(--text-primary-rgb), 0.68);
+  backdrop-filter: blur(8px);
+}
+
+.hero-fact b {
+  display: block;
+  color: var(--surface-paper);
+  font-size: 22px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.hero-fact > span {
+  display: block;
+  margin-top: var(--space-1);
+  color: rgba(var(--surface-paper-rgb), 0.72);
+  font-size: 12px;
+}
+
+.hero-fact b .count {
+  display: inline;
+  margin: 0;
+  color: inherit;
+  font: inherit;
+}
+
+.hero-registry {
+  align-self: end;
+  align-content: start;
+  display: grid;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  border: 1px solid rgba(var(--surface-paper-rgb), 0.26);
+  border-radius: var(--radius);
+  background: rgba(var(--surface-deep-rgb), 0.72);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 18px 44px rgba(var(--shadow-deep-rgb), 0.28);
+}
+
+.hero-registry h2 {
+  margin: 0;
+  color: var(--surface-paper);
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+.registry-list {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+}
+
+.registry-list div {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  gap: var(--space-3);
+  padding-top: var(--space-3);
+  border-top: 1px solid rgba(var(--surface-paper-rgb), 0.18);
+}
+
+.registry-list dt {
+  color: rgba(var(--surface-paper-rgb), 0.62);
+  font-size: 13px;
+}
+
+.registry-list dd {
+  margin: 0;
+  color: rgba(var(--surface-paper-rgb), 0.92);
+  font-weight: 700;
+}
+
+.registry-list dd a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.notice-strip {
+  background: var(--surface-paper);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.notice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--border-default);
+  border-left: 1px solid var(--border-default);
+  border-right: 1px solid var(--border-default);
+}
+
+.notice-item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
+  align-items: start;
+  background: var(--surface-paper);
+  padding: var(--space-5);
+}
+
+.notice-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-sm);
+  display: grid;
+  place-items: center;
+  background: rgba(var(--accent-primary-rgb), 0.1);
+  color: var(--accent-primary);
+}
+
+.notice-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.notice-item b {
+  display: block;
+  color: var(--text-primary);
+  line-height: 1.35;
+}
+
+.notice-item span {
+  display: block;
+  margin-top: var(--space-1);
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.consult-panel {
+  margin-top: calc(var(--space-20) * -0.65);
+  position: relative;
+  z-index: 2;
+}
+
+.consult-shell {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 1px;
+  background: var(--border-default);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-default);
+}
+
+.consult-copy,
+.consult-form {
+  background: var(--surface-paper);
+  padding: clamp(24px, 4vw, 40px);
+}
+
+.consult-copy {
+  background:
+    linear-gradient(180deg, rgba(var(--accent-primary-rgb), 0.08), rgba(var(--accent-primary-rgb), 0)),
+    var(--surface-paper);
+}
+
+.consult-copy h2,
+.consult-form h2 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.22;
+}
+
+.consult-copy p {
+  margin: var(--space-4) 0 0;
+}
+
+.assurance-list {
+  display: grid;
+  gap: var(--space-3);
+  margin: var(--space-8) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.assurance-list li {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  color: var(--text-primary);
+  font-weight: 650;
+}
+
+.assurance-list svg {
+  width: 19px;
+  height: 19px;
+  margin-top: 3px;
+  color: var(--accent-primary);
+  flex: none;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.field {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.field input,
+.field select {
+  min-height: 50px;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  background: var(--surface-primary);
+  color: var(--text-primary);
+  padding: 0 var(--space-4);
+}
+
+.field input:focus,
+.field select:focus {
+  border-color: var(--accent-primary);
+  background: var(--surface-paper);
+}
+
+.consent {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+  margin-top: var(--space-5);
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.consent input {
+  width: 18px;
+  height: 18px;
+  margin-top: 3px;
+  accent-color: var(--accent-primary);
+  flex: none;
+}
+
+.consent a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  color: var(--accent-primary);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.form-footer {
+  display: grid;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.form-footer .btn {
+  width: 100%;
+}
+
+.form-note,
+.form-status {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.form-status {
+  min-height: 20px;
+  color: var(--accent-primary);
+  font-weight: 700;
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: var(--space-8);
+  margin-bottom: var(--space-10);
+}
+
+.product-header .section-lead {
+  max-width: 520px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  background: var(--surface-paper);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-subtle);
+  transition: border-color 180ms ease, transform 120ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.product-card:hover,
+.product-card:focus-within {
+  border-color: rgba(var(--accent-primary-rgb), 0.42);
+  background: var(--surface-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(var(--text-primary-rgb), 0.12);
+}
+
+.product-card.is-selected {
+  border-color: rgba(var(--accent-primary-rgb), 0.7);
+  background:
+    linear-gradient(180deg, rgba(var(--accent-primary-rgb), 0.06), rgba(var(--surface-paper-rgb), 0)),
+    var(--surface-paper);
+  box-shadow: 0 18px 38px rgba(var(--accent-primary-rgb), 0.16);
+}
+
+.product-media {
+  aspect-ratio: 16 / 9;
+  background: var(--surface-muted);
+  overflow: hidden;
+}
+
+.product-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-body {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  flex: 1;
+}
+
+.product-badge {
+  width: fit-content;
+  border: 1px solid rgba(var(--accent-primary-rgb), 0.22);
+  border-radius: 999px;
+  color: var(--accent-primary);
+  background: rgba(var(--accent-primary-rgb), 0.06);
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.product-body h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 23px;
+  line-height: 1.3;
+}
+
+.product-body p {
+  margin: 0;
+}
+
+.product-table {
+  display: grid;
+  margin-top: auto;
+  border-top: 1px solid var(--border-default);
+}
+
+.product-table div {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border-default);
+  font-size: 14px;
+}
+
+.product-table dt {
+  color: var(--text-muted);
+}
+
+.product-table dd {
+  margin: 0;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.product-card .btn {
+  width: 100%;
+  margin-top: var(--space-2);
+}
+
+.legal-note {
+  margin: var(--space-5) 0 0;
+  color: var(--text-muted);
+  font-size: 13px;
+}
+
+.deep-band {
+  color: rgba(var(--surface-paper-rgb), 0.78);
+  background: var(--surface-deep);
+}
+
+.deep-band .section-title,
+.deep-band h3,
+.deep-band b {
+  color: var(--surface-paper);
+}
+
+.deep-band .eyebrow {
+  color: var(--accent-secondary);
+}
+
+.process-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.process-list {
+  display: grid;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: process;
+}
+
+.process-list li {
+  counter-increment: process;
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border: 1px solid rgba(var(--surface-paper-rgb), 0.18);
+  border-radius: var(--radius);
+  background: rgba(var(--surface-paper-rgb), 0.06);
+}
+
+.process-list li::before {
+  content: counter(process);
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-sm);
+  background: rgba(var(--accent-secondary-rgb), 0.12);
+  color: var(--accent-secondary);
+  font-weight: 800;
+}
+
+.process-list h3 {
+  margin: 0 0 var(--space-1);
+  font-size: 19px;
+}
+
+.process-list p {
+  margin: 0;
+}
+
+.case-panel {
+  padding: var(--space-6);
+  border: 1px solid rgba(var(--surface-paper-rgb), 0.18);
+  border-radius: var(--radius);
+  background: rgba(var(--surface-paper-rgb), 0.06);
+}
+
+.case-panel h3 {
+  margin: 0 0 var(--space-4);
+  font-size: 22px;
+}
+
+.case-list {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: rgba(var(--surface-paper-rgb), 0.16);
+  border: 1px solid rgba(var(--surface-paper-rgb), 0.16);
+}
+
+.case-list li {
+  display: grid;
+  grid-template-columns: 1.1fr 0.7fr 0.55fr;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: rgba(var(--text-primary-rgb), 0.86);
+}
+
+.case-list span {
+  color: rgba(var(--surface-paper-rgb), 0.58);
+  font-size: 12px;
+}
+
+.case-list b {
+  display: block;
+  margin-top: 2px;
+  font-size: 14px;
+}
+
+.case-disclaimer {
+  margin: var(--space-4) 0 0;
+  color: rgba(var(--surface-paper-rgb), 0.58);
+  font-size: 12px;
+}
+
+.case-panel-wrap {
+  margin-top: var(--space-12);
+}
+
+.strength-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: var(--space-10);
+  background: var(--border-default);
+  border: 1px solid var(--border-default);
+}
+
+.strength-card {
+  background: var(--surface-paper);
+  padding: var(--space-6);
+}
+
+.strength-card span {
+  display: block;
+  margin-bottom: var(--space-8);
+  color: var(--accent-secondary);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.strength-card h3 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 21px;
+  line-height: 1.35;
+}
+
+.strength-card p {
+  margin: var(--space-3) 0 0;
+  font-size: 14px;
+}
+
+.safety-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.safety-media {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border-default);
+  background: var(--surface-muted);
+}
+
+.safety-media img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+}
+
+.safety-list {
+  display: grid;
+  gap: var(--space-3);
+  margin: var(--space-8) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.safety-list li {
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: var(--space-3);
+  align-items: start;
+  padding: var(--space-4);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  background: var(--surface-paper);
+}
+
+.safety-list span {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-sm);
+  background: rgba(var(--accent-primary-rgb), 0.1);
+  color: var(--accent-secondary);
+  font-weight: 800;
+}
+
+.apply-band {
+  background:
+    linear-gradient(90deg, rgba(var(--surface-deep-rgb), 0.94), rgba(var(--surface-deep-alt-rgb), 0.78)),
+    url("powermoney_codex_assets/safety-documents.webp") center / cover no-repeat;
+  color: rgba(var(--surface-paper-rgb), 0.82);
+}
+
+.apply-layout {
+  display: grid;
+  grid-template-columns: 0.88fr 1.12fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.apply-band .section-title,
+.apply-band b {
+  color: var(--surface-paper);
+}
+
+.apply-band .eyebrow {
+  color: var(--accent-secondary);
+}
+
+.apply-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+}
+
+.footer {
+  padding: var(--space-16) 0 120px;
+  color: rgba(var(--surface-paper-rgb), 0.62);
+  background: var(--surface-deep);
+  font-size: 13px;
+}
+
+.footer a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: rgba(var(--surface-paper-rgb), 0.84);
+  font-weight: 700;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.footer-links a {
+  min-height: 44px;
+}
+
+.footer dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-2) var(--space-4);
+  margin: 0;
+  padding: var(--space-6) 0;
+  border-top: 1px solid rgba(var(--surface-paper-rgb), 0.12);
+  border-bottom: 1px solid rgba(var(--surface-paper-rgb), 0.12);
+}
+
+.footer dt {
+  color: rgba(var(--surface-paper-rgb), 0.42);
+}
+
+.footer dd {
+  margin: 0;
+}
+
+.warning-box {
+  margin-top: var(--space-6);
+  padding: var(--space-4);
+  border: 1px solid rgba(var(--status-warning-rgb), 0.32);
+  border-radius: var(--radius);
+  background: rgba(var(--status-warning-rgb), 0.08);
+  color: rgba(var(--surface-paper-rgb), 0.76);
+}
+
+.copyright {
+  margin: var(--space-6) 0 0;
+  color: rgba(var(--surface-paper-rgb), 0.42);
+}
+
+.quickbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(100%);
+  background: rgba(var(--surface-paper-rgb), 0.96);
+  border-top: 1px solid var(--border-default);
+  box-shadow: var(--shadow-fixed);
+  backdrop-filter: blur(12px);
+  transition: transform 180ms ease, visibility 180ms ease;
+}
+
+.quickbar.visible {
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.quickbar-inner {
+  width: min(var(--max-width), calc(100% - 24px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: var(--space-2);
+  padding: var(--space-2) 0;
+}
+
+.quickbar .btn {
+  min-height: 48px;
+}
+
+.quickbar .top-btn {
+  width: 48px;
+  padding: 0;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  background: rgba(var(--surface-deep-rgb), 0.64);
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-card {
+  width: min(680px, 100%);
+  max-height: min(720px, calc(100dvh - 40px));
+  overflow: auto;
+  background: var(--surface-paper);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-default);
+  box-shadow: var(--shadow-default);
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  border-bottom: 1px solid var(--border-default);
+}
+
+.modal-head h2 {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 22px;
+}
+
+.modal-close {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-sm);
+  background: var(--surface-muted);
+  color: var(--text-primary);
+}
+
+.modal-close svg {
+  width: 18px;
+  height: 18px;
+}
+
+.modal-body {
+  padding: var(--space-5);
+}
+
+.modal-body h3 {
+  margin: var(--space-5) 0 var(--space-2);
+  color: var(--text-primary);
+  font-size: 17px;
+}
+
+.modal-body h3:first-child {
+  margin-top: 0;
+}
+
+.modal-body p,
+.modal-body li {
+  font-size: 14px;
+}
+
+.modal-body ul {
+  padding-left: var(--space-5);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 360ms cubic-bezier(0.16, 1, 0.3, 1), transform 360ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.on {
+  opacity: 1;
+  transform: none;
+}
+
+@media (max-width: 1040px) {
+  .header-inner {
+    grid-template-columns: 1fr auto;
+  }
+
+  .nav,
+  .license-chip,
+  .header-actions .btn {
+    display: none;
+  }
+
+  .mobile-menu-button {
+    display: grid;
+  }
+
+  .nav.open {
+    position: fixed;
+    left: 20px;
+    right: 20px;
+    top: 86px;
+    display: grid;
+    justify-content: stretch;
+    gap: 0;
+    padding: var(--space-3);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius);
+    background: var(--surface-paper);
+    box-shadow: var(--shadow-default);
+  }
+
+  .site-header.is-scrolled .nav.open {
+    background: var(--surface-paper);
+    color: var(--text-secondary);
+  }
+
+  .nav.open a {
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+  }
+
+  .hero-grid,
+  .consult-shell,
+  .process-layout,
+  .safety-layout,
+  .apply-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+  }
+
+  .hero-registry {
+    display: none;
+  }
+
+  .consult-panel {
+    margin-top: 0;
+  }
+
+  .notice-grid,
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-header {
+    display: block;
+  }
+
+  .strength-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .container {
+    width: min(100% - 32px, var(--max-width));
+  }
+
+  .section,
+  .section.compact {
+    padding: var(--space-12) 0;
+  }
+
+  .header-inner {
+    min-height: 64px;
+  }
+
+  .brand {
+    min-height: 48px;
+  }
+
+  .brand-emblem {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    font-size: 16px;
+  }
+
+  .brand-emblem::after {
+    inset: 7px;
+    border-radius: 8px;
+  }
+
+  .brand-word .logo-word {
+    font-size: 15px;
+  }
+
+  .brand-dot {
+    width: 7px;
+    height: 7px;
+  }
+
+  .brand-word small {
+    display: none;
+  }
+
+  .hero::before {
+    background:
+      linear-gradient(180deg, rgba(var(--surface-deep-rgb), 0.92) 0%, rgba(var(--surface-deep-mid-rgb), 0.82) 58%, rgba(var(--surface-deep-rgb), 0.86) 100%),
+      url("powermoney_codex_assets/hero-consultation.webp") center / cover no-repeat;
+  }
+
+  .hero-content {
+    padding: var(--space-12) 0;
+  }
+
+  .form-grid,
+  .case-list li,
+  .footer dl {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-facts {
+    grid-template-columns: 1fr 1.16fr 1fr;
+    max-width: none;
+  }
+
+  .hero-fact {
+    padding: var(--space-3);
+  }
+
+  .hero-fact b {
+    font-size: 17px;
+  }
+
+  .hero-fact > span {
+    font-size: 11px;
+  }
+
+  .hero-registry {
+    padding: var(--space-5);
+  }
+
+  .registry-list div {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+
+  .consult-copy,
+  .consult-form,
+  .case-panel {
+    padding: var(--space-5);
+  }
+
+  .product-table div {
+    grid-template-columns: 82px 1fr;
+  }
+
+  .strength-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .safety-media img {
+    min-height: 280px;
+  }
+
+  .apply-actions,
+  .hero-actions {
+    display: grid;
+  }
+
+  .quickbar-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .quickbar .top-btn {
+    display: none;
+  }
+
+  .quickbar .btn {
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+</style>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">본문으로 바로가기</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="파워머니플랜 홈">
+      <span class="brand-emblem" aria-hidden="true"><span>P</span></span>
+      <span class="brand-word">
+        <span class="logo-word">POWER<span class="brand-dot"></span><br>MONEYPLAN</span>
+        <small>사업자 전용 자금 상담</small>
+      </span>
+    </a>
+
+    <nav class="nav" id="siteNav" aria-label="주요 메뉴">
+      <a href="#products">상품</a>
+      <a href="#process">절차</a>
+      <a href="#safety">안전고지</a>
+      <a href="#apply">상담신청</a>
+    </nav>
+
+    <div class="header-actions">
+      <span class="license-chip">등록번호 2025-충남천안-0013(중개)</span>
+      <a class="btn btn-primary" href="tel:010-5479-1318" aria-label="010-5479-1318 전화상담">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+        전화상담
+      </a>
+      <button class="mobile-menu-button" type="button" id="menuButton" aria-controls="siteNav" aria-expanded="false" aria-label="메뉴 열기">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4 6h16v2H4V6zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="heroTitle">
+    <div class="container hero-content">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">개인사업자 · 법인사업자 · 기업단기자금</p>
+          <h1 id="heroTitle">사업자금 상담은 <span>등록 업체와</span> 차분하게 확인하세요</h1>
+          <p class="hero-lead">개업 직후 개인사업자부터 설립 3개월 이상 법인까지, 매출과 사업 상황을 기준으로 가능한 상품을 안내합니다.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#consultForm">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-5 4v-4H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v10h1v1.84L8.3 16H19V6H5zm3 3h8v2H8V9zm0 4h5v2H8v-2z"/></svg>
+              무료 상담 신청
+            </a>
+            <a class="btn btn-secondary" href="#safety">안전 고지 확인</a>
+          </div>
+          <div class="hero-facts" aria-label="주요 상담 조건">
+            <div class="hero-fact"><b>최대 <span class="count" data-count-to="10">10</span>억</b><span>상품 및 심사 결과별 상이</span></div>
+            <div class="hero-fact"><b>연 <span class="count" data-count-to="4.9" data-decimals="1">4.9</span>~20%</b><span>법정 최고금리 이내</span></div>
+            <div class="hero-fact"><b>1~<span class="count" data-count-to="12">12</span>개월</b><span>상품별 연장 가능</span></div>
+          </div>
+        </div>
+
+        <aside class="hero-registry reveal" aria-label="등록 업체 정보">
+          <h2>상담 전 확인해야 하는 등록 정보</h2>
+          <dl class="registry-list">
+            <div><dt>상호</dt><dd>로스차일드대부</dd></div>
+            <div><dt>대표</dt><dd>정상준</dd></div>
+            <div><dt>사업자번호</dt><dd>761-93-01275</dd></div>
+            <div><dt>등록번호</dt><dd>2025-충남천안-0013(중개)</dd></div>
+            <div><dt>대표번호</dt><dd><a href="tel:010-5479-1318">010-5479-1318</a></dd></div>
+          </dl>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="notice-strip" aria-label="핵심 고지">
+    <div class="container notice-grid">
+      <div class="notice-item">
+        <span class="notice-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 4 5v6c0 5.55 3.84 10.74 8 12 4.16-1.26 8-6.45 8-12V5l-8-3zm0 2.17 6 2.25V11c0 4.2-2.55 8.2-6 9.86C8.55 19.2 6 15.2 6 11V6.42l6-2.25z"/></svg></span>
+        <p><b>신용점수 영향 없는 단순 상담</b><span>실제 대출 심사는 금융사 기준에 따라 별도 진행됩니다.</span></p>
+      </div>
+      <div class="notice-item">
+        <span class="notice-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 1 3 5v6c0 5.1 3.8 9.9 9 12 5.2-2.1 9-6.9 9-12V5l-9-4zm0 2.2 7 3.1V11c0 4-2.8 7.8-7 9.8C7.8 18.8 5 15 5 11V6.3l7-3.1zm-1 5.8h2v6h-2V9zm0 8h2v2h-2v-2z"/></svg></span>
+        <p><b>중개수수료 요구는 불법</b><span>대출 실행 전 비용이나 입금을 요구하면 진행을 중단하세요.</span></p>
+      </div>
+      <div class="notice-item">
+        <span class="notice-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M7 2h10a2 2 0 0 1 2 2v18l-7-3-7 3V4a2 2 0 0 1 2-2zm0 2v15l5-2.14L17 19V4H7zm2 4h6v2H9V8zm0 4h6v2H9v-2z"/></svg></span>
+        <p><b>등록번호와 상호 확인</b><span>상담 전 업체명, 등록번호, 대표번호를 반드시 대조하세요.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section consult-panel" aria-labelledby="consultTitle">
+    <div class="container">
+      <div class="consult-shell">
+        <div class="consult-copy">
+          <p class="eyebrow">FREE CONSULTING</p>
+          <h2 id="consultTitle">1분 상담 신청으로 가능한 상품부터 확인</h2>
+          <p>상품, 희망 금액, 연락처만 남겨주시면 담당자가 사업 형태와 매출 기준을 확인해 안내합니다.</p>
+          <ul class="assurance-list">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m9.55 17.2-4.25-4.25 1.4-1.4 2.85 2.85 7.75-7.75 1.4 1.4-9.15 9.15z"/></svg>개인정보는 상담 목적 외로 사용하지 않습니다.</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m9.55 17.2-4.25-4.25 1.4-1.4 2.85 2.85 7.75-7.75 1.4 1.4-9.15 9.15z"/></svg>수수료, 선입금, 보증금 요구 없이 진행합니다.</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m9.55 17.2-4.25-4.25 1.4-1.4 2.85 2.85 7.75-7.75 1.4 1.4-9.15 9.15z"/></svg>상담 이후 진행 여부는 직접 결정하실 수 있습니다.</li>
+          </ul>
+        </div>
+
+        <form class="consult-form" id="consultForm" novalidate>
+          <h2>대출 가능 여부 확인</h2>
+          <div class="form-grid">
+            <div class="field full">
+              <label for="productType">원하는 대출 상품</label>
+              <select id="productType" name="productType" required>
+                <option value="">상품을 선택하세요</option>
+                <option>개인사업자대출</option>
+                <option>법인사업자대출</option>
+                <option>기업단기자금대출</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="amount">대출 희망 금액</label>
+              <select id="amount" name="amount" required>
+                <option value="">금액 선택</option>
+                <option>1,000만원 미만</option>
+                <option>1,000만원 이상</option>
+                <option>5,000만원 이상</option>
+                <option>1억원 이상</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="businessAge">사업 기간</label>
+              <select id="businessAge" name="businessAge" required>
+                <option value="">기간 선택</option>
+                <option>개업 직후</option>
+                <option>3개월 미만</option>
+                <option>3개월 이상</option>
+                <option>1년 이상</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="name">이름</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="성함" required>
+            </div>
+            <div class="field">
+              <label for="phone">연락처</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="010-0000-0000" required>
+            </div>
+          </div>
+          <label class="consent">
+            <input type="checkbox" id="privacyAgree" required>
+            <span>개인정보 수집 및 이용에 동의합니다. <a href="#" data-modal="privacy">약관보기</a></span>
+          </label>
+          <div class="form-footer">
+            <button class="btn btn-primary" type="submit">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5 12h12.17l-5.58-5.59L13 5l8 8-8 8-1.41-1.41L17.17 14H5v-2z"/></svg>
+              상담 신청 접수
+            </button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            <p class="form-note" id="formHelp">본 화면은 로컬 HTML 시안입니다. 실제 전송은 서버 연동 후 동작합니다.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="products" aria-labelledby="productsTitle">
+    <div class="container">
+      <div class="product-header reveal">
+        <div>
+          <p class="eyebrow">LOAN PRODUCTS</p>
+          <h2 class="section-title" id="productsTitle">사업 형태별 상담 상품</h2>
+        </div>
+        <p class="section-lead">개인사업자, 법인사업자, 단기 운영자금 상황에 맞춰 한도와 기간을 확인합니다.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card reveal">
+          <div class="product-media">
+            <img src="powermoney_codex_assets/product-personal.webp" width="1400" height="788" alt="매장에서 매출 자료를 확인하는 개인사업자" loading="lazy">
+          </div>
+          <div class="product-body">
+            <span class="product-badge">개업 직후 상담 가능</span>
+            <h3>개인사업자대출</h3>
+            <p>소득신고와 별개로 월 매출 확인이 가능한 개인사업자를 위한 상담 상품입니다.</p>
+            <dl class="product-table">
+              <div><dt>자격</dt><dd>개업 직후도 상담 가능</dd></div>
+              <div><dt>한도</dt><dd>500만 ~ 2억</dd></div>
+              <div><dt>금리</dt><dd>연 4.9% ~ 20%</dd></div>
+              <div><dt>기간</dt><dd>1~12개월, 연장 가능</dd></div>
+            </dl>
+            <a class="btn btn-secondary" href="#consultForm" data-product="개인사업자대출">한도 상담하기</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-media">
+            <img src="powermoney_codex_assets/product-corporate.webp" width="1400" height="788" alt="법인 자금 상담을 위해 서류를 검토하는 회의 장면" loading="lazy">
+          </div>
+          <div class="product-body">
+            <span class="product-badge">법인 설립 3개월 이상</span>
+            <h3>법인사업자대출</h3>
+            <p>법인 설립 기간과 매출 자료를 기준으로 운영자금 또는 확장자금을 확인합니다.</p>
+            <dl class="product-table">
+              <div><dt>자격</dt><dd>법인 설립 3개월 이상</dd></div>
+              <div><dt>한도</dt><dd>3,000만 ~ 10억</dd></div>
+              <div><dt>금리</dt><dd>연 4.9% ~ 20%</dd></div>
+              <div><dt>기간</dt><dd>1~12개월, 연장 가능</dd></div>
+            </dl>
+            <a class="btn btn-secondary" href="#consultForm" data-product="법인사업자대출">법인 상담하기</a>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-media">
+            <img src="powermoney_codex_assets/product-shortterm.webp" width="1400" height="788" alt="단기 자금 계획을 위해 재무 서류를 검토하는 장면" loading="lazy">
+          </div>
+          <div class="product-body">
+            <span class="product-badge">긴급 운영자금 특화</span>
+            <h3>기업단기자금대출</h3>
+            <p>매입, 인건비, 공사대금 공백처럼 짧은 기간의 자금 수요를 확인합니다.</p>
+            <dl class="product-table">
+              <div><dt>자격</dt><dd>단기 자금이 필요한 기업</dd></div>
+              <div><dt>한도</dt><dd>1,000만 ~ 10억</dd></div>
+              <div><dt>금리</dt><dd>연 4.9% ~ 20%</dd></div>
+              <div><dt>기간</dt><dd>1~12개월, 연장 가능</dd></div>
+            </dl>
+            <a class="btn btn-secondary" href="#consultForm" data-product="기업단기자금대출">단기자금 상담하기</a>
+          </div>
+        </article>
+      </div>
+      <p class="legal-note">상품 조건, 승인 금액, 금리, 기간은 개인별 신용도와 사업 현황, 심사 기준에 따라 달라질 수 있습니다.</p>
+    </div>
+  </section>
+
+  <section class="section deep-band" id="process" aria-labelledby="processTitle">
+    <div class="container process-layout">
+      <div class="reveal">
+        <p class="eyebrow">PROCESS</p>
+        <h2 class="section-title" id="processTitle">복잡한 연출보다 중요한 것은 확인 가능한 절차입니다</h2>
+        <p class="section-lead">상담, 자료 확인, 심사 안내, 실행까지 필요한 단계만 순서대로 안내합니다.</p>
+      </div>
+      <div>
+        <ol class="process-list">
+          <li class="reveal"><div><h3>상담 접수</h3><p>상품, 희망 금액, 사업 기간과 연락처를 확인합니다.</p></div></li>
+          <li class="reveal"><div><h3>자료 확인</h3><p>매출, 사업자 정보, 법인 설립 기간 등 기본 조건을 확인합니다.</p></div></li>
+          <li class="reveal"><div><h3>심사 안내</h3><p>가능 상품과 필요 서류, 예상 조건을 설명한 뒤 진행 여부를 확인합니다.</p></div></li>
+          <li class="reveal"><div><h3>대출 실행</h3><p>심사 승인 후 약정과 실행 절차를 안내합니다.</p></div></li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="container case-panel-wrap">
+      <div class="case-panel reveal" aria-label="상담 사례">
+        <h3>상담 사례</h3>
+        <ul class="case-list">
+          <li><div><span>업종</span><b>제조업 법인</b></div><div><span>자금 목적</span><b>운전자금</b></div><div><span>상담 금액</span><b>3억원</b></div></li>
+          <li><div><span>업종</span><b>건설업 법인</b></div><div><span>자금 목적</span><b>공사대금 공백</b></div><div><span>상담 금액</span><b>5억원</b></div></li>
+          <li><div><span>업종</span><b>유통업 대표</b></div><div><span>자금 목적</span><b>재고 매입</b></div><div><span>상담 금액</span><b>8,000만원</b></div></li>
+        </ul>
+        <p class="case-disclaimer">상담 사례는 이해를 돕기 위한 예시이며 실제 승인 여부와 조건은 심사 결과에 따라 달라집니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section compact" aria-labelledby="strengthTitle">
+    <div class="container">
+      <p class="eyebrow">WHY POWERMONEYPLAN</p>
+      <h2 class="section-title" id="strengthTitle">사업자 대출 상담에서 먼저 확인해야 할 기준</h2>
+      <div class="strength-grid">
+        <article class="strength-card reveal">
+          <span>01</span>
+          <h3>신용점수 걱정 없는 상담</h3>
+          <p>단순 상담과 조건 확인만으로는 신용점수에 영향을 주지 않습니다.</p>
+        </article>
+        <article class="strength-card reveal">
+          <span>02</span>
+          <h3>매출 기준의 유연한 확인</h3>
+          <p>소득신고와 별개로 월 매출 기준을 확인해 가능성을 검토합니다.</p>
+        </article>
+        <article class="strength-card reveal">
+          <span>03</span>
+          <h3>중개수수료 0원 원칙</h3>
+          <p>대출 중개 과정에서 수수료를 요구하거나 받는 것은 불법입니다.</p>
+        </article>
+        <article class="strength-card reveal">
+          <span>04</span>
+          <h3>등록 정보 공개</h3>
+          <p>상호, 대표자, 사업자등록번호, 등록번호를 화면에서 바로 확인할 수 있습니다.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="safety" aria-labelledby="safetyTitle">
+    <div class="container safety-layout">
+      <div class="safety-media reveal">
+        <img src="powermoney_codex_assets/safety-documents.webp" width="1400" height="788" alt="상담 전 확인 서류와 체크리스트를 보여주는 금융 상담 장면" loading="lazy">
+      </div>
+      <div class="reveal">
+        <p class="eyebrow">SAFE LOAN</p>
+        <h2 class="section-title" id="safetyTitle">정식등록업체와 안전하게 진행하세요</h2>
+        <p class="section-lead">파워머니플랜은 등록 대부중개업체 로스차일드대부의 사업자 전용 상담 페이지입니다.</p>
+        <ul class="safety-list">
+          <li><span>1</span><p>전화번호, 등록번호, 상호를 상담 전 반드시 확인하세요.</p></li>
+          <li><span>2</span><p>중개수수료, 선입금, 보증금 요구는 정상적인 대출 절차가 아닙니다.</p></li>
+          <li><span>3</span><p>대출 조건은 심사 결과에 따라 달라지며 무조건 승인 표현을 신뢰하지 마세요.</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section apply-band" id="apply" aria-labelledby="applyTitle">
+    <div class="container apply-layout">
+      <div class="reveal">
+        <p class="eyebrow">CONSULTATION</p>
+        <h2 class="section-title" id="applyTitle">사업자금이 필요하다면 조건부터 차분히 확인하세요</h2>
+        <p class="section-lead">빠른 안내가 필요하시면 전화 상담을 이용하시거나 신청 폼을 남겨주세요.</p>
+        <div class="apply-actions">
+          <a class="btn btn-primary" href="tel:010-5479-1318">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+            010-5479-1318
+          </a>
+          <a class="btn btn-secondary" href="#consultForm">상담 신청으로 이동</a>
+        </div>
+      </div>
+      <div class="case-panel reveal">
+        <h3>상담 가능 상품</h3>
+        <ul class="case-list">
+          <li><div><span>상품</span><b>개인사업자대출</b></div><div><span>대상</span><b>개업 직후 가능</b></div><div><span>한도</span><b>최대 2억</b></div></li>
+          <li><div><span>상품</span><b>법인사업자대출</b></div><div><span>대상</span><b>설립 3개월 이상</b></div><div><span>한도</span><b>최대 10억</b></div></li>
+          <li><div><span>상품</span><b>기업단기자금</b></div><div><span>대상</span><b>운영자금 필요 기업</b></div><div><span>한도</span><b>최대 10억</b></div></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="#" data-modal="terms">이용약관</a>
+      <a href="#" data-modal="privacy">개인정보처리방침</a>
+      <a href="#" data-modal="email">이메일주소무단수집거부</a>
+    </div>
+    <dl>
+      <dt>상호</dt><dd>로스차일드대부</dd>
+      <dt>대표</dt><dd>정상준</dd>
+      <dt>사업자등록번호</dt><dd>761-93-01275</dd>
+      <dt>대부중개업 등록번호</dt><dd>2025-충남천안-0013(중개)</dd>
+      <dt>대표번호</dt><dd><a href="tel:010-5479-1318">010-5479-1318</a></dd>
+    </dl>
+    <div class="warning-box">
+      과도한 빚은 당신에게 큰 불행을 안겨줄 수 있습니다. 중개수수료를 요구하거나 받는 것은 불법이며, 대출 실행 전 입금을 요구하는 행위는 대출 사기일 수 있습니다.
+    </div>
+    <p class="copyright">Copyright © 개인·법인 사업자 대출 파워머니플랜. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="quickbar" id="quickbar" aria-label="빠른 상담 바" aria-hidden="true">
+  <div class="quickbar-inner">
+    <a class="btn btn-primary" href="tel:010-5479-1318">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.85 21 3 13.15 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+      전화상담
+    </a>
+    <a class="btn btn-secondary" href="#consultForm">상담 신청</a>
+    <a class="btn btn-secondary top-btn" href="#top" aria-label="맨 위로">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 5 5 12l1.41 1.41L11 8.83V20h2V8.83l4.59 4.58L19 12l-7-7z"/></svg>
+    </a>
+  </div>
+</div>
+
+<div class="modal" id="infoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h2 id="modalTitle">안내</h2>
+      <button class="modal-close" type="button" id="modalClose" aria-label="닫기">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="m6.4 5 5.6 5.6L17.6 5 19 6.4 13.4 12l5.6 5.6-1.4 1.4-5.6-5.6L6.4 19 5 17.6l5.6-5.6L5 6.4 6.4 5z"/></svg>
+      </button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+const $ = (selector, scope = document) => scope.querySelector(selector);
+const $$ = (selector, scope = document) => Array.from(scope.querySelectorAll(selector));
+
+const menuButton = $("#menuButton");
+const siteNav = $("#siteNav");
+if (menuButton && siteNav) {
+  menuButton.addEventListener("click", () => {
+    const isOpen = siteNav.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", String(isOpen));
+    menuButton.setAttribute("aria-label", isOpen ? "메뉴 닫기" : "메뉴 열기");
+  });
+
+  $$("#siteNav a").forEach((link) => {
+    link.addEventListener("click", () => {
+      siteNav.classList.remove("open");
+      menuButton.setAttribute("aria-expanded", "false");
+      menuButton.setAttribute("aria-label", "메뉴 열기");
+    });
+  });
+}
+
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const siteHeader = $(".site-header");
+const quickbar = $("#quickbar");
+function updateScrollEffects() {
+  const scrollTop = window.scrollY;
+  const maxScroll = Math.max(1, document.documentElement.scrollHeight - window.innerHeight);
+  const progress = Math.min(1, Math.max(0, scrollTop / maxScroll));
+  document.documentElement.style.setProperty("--scroll-progress", progress.toFixed(4));
+  if (siteHeader) siteHeader.classList.toggle("is-scrolled", scrollTop > 12);
+  if (!quickbar) return;
+  const show = scrollTop > 220;
+  quickbar.classList.toggle("visible", show);
+  quickbar.setAttribute("aria-hidden", String(!show));
+}
+
+updateScrollEffects();
+window.addEventListener("scroll", updateScrollEffects, { passive: true });
+
+if (!reduceMotion && "IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("on");
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  $$(".reveal").forEach((element) => revealObserver.observe(element));
+} else {
+  $$(".reveal").forEach((element) => element.classList.add("on"));
+}
+
+const navLinks = $$("#siteNav a[href^='#']");
+const navTargets = navLinks
+  .map((link) => ({ link, target: $(link.getAttribute("href")) }))
+  .filter((item) => item.target);
+
+function setActiveNav(id) {
+  navTargets.forEach(({ link }) => {
+    const isActive = link.getAttribute("href") === `#${id}`;
+    if (isActive) {
+      link.setAttribute("aria-current", "true");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  });
+}
+
+if ("IntersectionObserver" in window && navTargets.length) {
+  const navObserver = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (visible) syncActiveNavByScroll();
+  }, { rootMargin: "-34% 0px -54% 0px", threshold: [0.08, 0.2, 0.42] });
+  navTargets.forEach(({ target }) => navObserver.observe(target));
+}
+
+function syncActiveNavByScroll() {
+  if (!navTargets.length) return;
+  let activeId = navTargets[0].target.id;
+  let bestVisibleHeight = -1;
+  navTargets.forEach(({ target }) => {
+    const rect = target.getBoundingClientRect();
+    const visibleHeight = Math.max(0, Math.min(rect.bottom, window.innerHeight) - Math.max(rect.top, 0));
+    if (visibleHeight > bestVisibleHeight && rect.top < window.innerHeight * 0.92) {
+      activeId = target.id;
+      bestVisibleHeight = visibleHeight;
+    }
+  });
+  const atPageEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 4;
+  if (atPageEnd) activeId = navTargets[navTargets.length - 1].target.id;
+  setActiveNav(activeId);
+}
+
+syncActiveNavByScroll();
+window.addEventListener("scroll", syncActiveNavByScroll, { passive: true });
+
+const hero = $(".hero");
+if (hero && !reduceMotion) {
+  hero.addEventListener("pointermove", (event) => {
+    const rect = hero.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width) * 100;
+    const y = ((event.clientY - rect.top) / rect.height) * 100;
+    hero.style.setProperty("--pointer-x", `${x.toFixed(1)}%`);
+    hero.style.setProperty("--pointer-y", `${y.toFixed(1)}%`);
+  }, { passive: true });
+
+  hero.addEventListener("pointerleave", () => {
+    hero.style.setProperty("--pointer-x", "58%");
+    hero.style.setProperty("--pointer-y", "38%");
+  });
+}
+
+function animateCount(element) {
+  if (element.dataset.counted === "true") return;
+  element.dataset.counted = "true";
+  const target = Number(element.dataset.countTo || element.textContent);
+  const decimals = Number(element.dataset.decimals || 0);
+  if (!Number.isFinite(target) || reduceMotion) {
+    element.textContent = target.toLocaleString("ko-KR", {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals
+    });
+    return;
+  }
+
+  const duration = 820;
+  const start = performance.now();
+  const render = (now) => {
+    const elapsed = Math.min(1, (now - start) / duration);
+    const eased = 1 - Math.pow(1 - elapsed, 3);
+    const value = target * eased;
+    element.textContent = value.toLocaleString("ko-KR", {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals
+    });
+    if (elapsed < 1) requestAnimationFrame(render);
+  };
+
+  element.textContent = (0).toLocaleString("ko-KR", {
+    minimumFractionDigits: decimals,
+    maximumFractionDigits: decimals
+  });
+  requestAnimationFrame(render);
+}
+
+const countElements = $$(".count[data-count-to]");
+if ("IntersectionObserver" in window && countElements.length) {
+  const countObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      animateCount(entry.target);
+      countObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.7 });
+  countElements.forEach((element) => countObserver.observe(element));
+} else {
+  countElements.forEach(animateCount);
+}
+
+const form = $("#consultForm");
+const statusBox = $("#formStatus");
+if (form && statusBox) {
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const requiredFields = $$("[required]", form);
+    const firstInvalid = requiredFields.find((field) => {
+      if (field.type === "checkbox") return !field.checked;
+      return !field.value.trim();
+    });
+
+    if (firstInvalid) {
+      statusBox.textContent = "필수 항목을 모두 입력해 주세요.";
+      firstInvalid.focus();
+      return;
+    }
+
+    statusBox.textContent = "상담 신청 내용이 확인되었습니다. 실제 전송은 서버 연동 후 동작합니다.";
+  });
+}
+
+const productSelect = $("#productType");
+const amountSelect = $("#amount");
+const productTriggers = $$("[data-product]");
+
+function syncSelectedProduct(productName) {
+  productTriggers.forEach((trigger) => {
+    const card = trigger.closest(".product-card");
+    if (card) card.classList.toggle("is-selected", trigger.dataset.product === productName);
+  });
+}
+
+if (productSelect) {
+  productSelect.addEventListener("change", () => syncSelectedProduct(productSelect.value));
+}
+
+productTriggers.forEach((trigger) => {
+  trigger.addEventListener("click", () => {
+    const productName = trigger.dataset.product;
+    if (!productName || !productSelect) return;
+    productSelect.value = productName;
+    syncSelectedProduct(productName);
+    if (statusBox) statusBox.textContent = `${productName} 상담 항목이 선택되었습니다. 희망 금액을 이어서 선택해 주세요.`;
+    window.setTimeout(() => {
+      if (amountSelect) amountSelect.focus({ preventScroll: true });
+    }, 420);
+  });
+});
+
+const modal = $("#infoModal");
+const modalTitle = $("#modalTitle");
+const modalBody = $("#modalBody");
+const modalClose = $("#modalClose");
+let modalLastFocused = null;
+const modalSiblingState = new WeakMap();
+const modalContent = {
+  privacy: {
+    title: "개인정보 수집 및 이용 안내",
+    body: `
+      <h3>수집 항목</h3>
+      <p>이름, 연락처, 희망 상품, 희망 금액, 사업 기간</p>
+      <h3>이용 목적</h3>
+      <p>대출 상담 가능 여부 확인, 상담 연락, 상품 안내</p>
+      <h3>보유 기간</h3>
+      <p>상담 목적 달성 후 관계 법령에 따라 필요한 기간 동안 보관 후 파기합니다.</p>
+    `
+  },
+  terms: {
+    title: "이용약관",
+    body: `
+      <h3>상담 안내</h3>
+      <p>본 페이지는 사업자 대출 상담 신청을 위한 안내 화면입니다. 실제 대출 승인 여부와 조건은 심사 결과에 따라 달라집니다.</p>
+      <h3>수수료 고지</h3>
+      <p>대출 중개 과정에서 중개수수료를 요구하거나 받는 행위는 불법입니다.</p>
+    `
+  },
+  email: {
+    title: "이메일주소무단수집거부",
+    body: `
+      <p>본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부합니다.</p>
+    `
+  }
+};
+
+function getModalSiblings() {
+  if (!modal) return [];
+  return Array.from(document.body.children).filter((child) => child !== modal && child.tagName !== "SCRIPT");
+}
+
+function setModalSiblingsInert(isInert) {
+  getModalSiblings().forEach((child) => {
+    if (isInert) {
+      modalSiblingState.set(child, {
+        inert: child.inert,
+        ariaHidden: child.getAttribute("aria-hidden")
+      });
+      child.inert = true;
+      child.setAttribute("aria-hidden", "true");
+      return;
+    }
+
+    const previous = modalSiblingState.get(child);
+    child.inert = previous ? previous.inert : false;
+    if (previous?.ariaHidden !== null && previous?.ariaHidden !== undefined) {
+      child.setAttribute("aria-hidden", previous.ariaHidden);
+    } else {
+      child.removeAttribute("aria-hidden");
+    }
+    modalSiblingState.delete(child);
+  });
+}
+
+function getFocusableElements(scope) {
+  return $$("a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex='-1'])", scope)
+    .filter((element) => {
+      const rect = element.getBoundingClientRect();
+      const style = getComputedStyle(element);
+      return rect.width > 0 && rect.height > 0 && style.visibility !== "hidden" && style.display !== "none";
+    });
+}
+
+function openModal(key) {
+  const content = modalContent[key];
+  if (!content || !modal || !modalTitle || !modalBody) return;
+  modalLastFocused = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+  modalTitle.textContent = content.title;
+  modalBody.innerHTML = content.body;
+  modal.classList.add("open");
+  modal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("locked");
+  if (modalClose) modalClose.focus();
+  setModalSiblingsInert(true);
+}
+
+function closeModal() {
+  if (!modal) return;
+  const wasOpen = modal.classList.contains("open");
+  if (!wasOpen) return;
+  modal.classList.remove("open");
+  modal.setAttribute("aria-hidden", "true");
+  document.body.classList.remove("locked");
+  setModalSiblingsInert(false);
+  if (wasOpen && modalLastFocused && typeof modalLastFocused.focus === "function") {
+    modalLastFocused.focus({ preventScroll: true });
+  }
+  modalLastFocused = null;
+}
+
+$$("[data-modal]").forEach((trigger) => {
+  trigger.addEventListener("click", (event) => {
+    event.preventDefault();
+    openModal(trigger.dataset.modal);
+  });
+});
+
+if (modalClose) {
+  modalClose.addEventListener("click", closeModal);
+}
+
+if (modal) {
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) closeModal();
+  });
+
+  modal.addEventListener("keydown", (event) => {
+    if (event.key !== "Tab") return;
+    const focusable = getFocusableElements(modal);
+    if (!focusable.length) {
+      event.preventDefault();
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+}
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeModal();
+});
+</script>
+</body>
+</html>
